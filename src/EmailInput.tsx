@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 const NOTION_KEY = import.meta.env.VITE_NOTION_KEY;
 const NOTION_DATABASE_ID = import.meta.env.VITE_NOTION_DATABASE_ID;
 
@@ -7,7 +8,11 @@ const EmailInput = () => {
 	const [error, setError] = useState<string>("");
 	const [success, setSuccess] = useState<string>("");
 
-	const validateEmail = (email: string) => {
+	const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setEmail(e.target.value);
+	  };
+
+	const validateEmail = (email: string): RegExpMatchArray | null => {
 		return String(email)
 			.toLowerCase()
 			.match(
@@ -71,11 +76,11 @@ const EmailInput = () => {
 	};
 
 	return (
-		<form onSubmit={(e) => handleSubmit(e)}>
+		<form id='signup-form' onSubmit={handleSubmit}>
 			<input
-				type="text"
-				name="email"
-				onChange={(e) => setEmail(e.target.value)}
+				type="email"
+				placeholder="Email"
+				onChange={handleEmailChange}
 				defaultValue={email}
 			/>
 			<button type="submit">Submit</button>

@@ -1,19 +1,7 @@
-import { useState } from 'react';
 import './App.css'
 import EmailInput from './EmailInput';
 
 const App = () => {
-  const [email, setEmail] = useState<string>('');
-
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('TODO: sign up: ', email);
-  };
-
   return (
     <div className='App'>
       <div id='roads-container'>
@@ -33,10 +21,6 @@ const App = () => {
       </div>
       <h2 id='subtitle'>your nightlife companion.</h2>
       <h3>Sign up for beta access.</h3>
-      <form id='signup-form' onSubmit={handleSubmit}>
-        <input type='email' placeholder='Email' value={email} onChange={handleEmailChange} />
-        <button type='submit'>Sign up</button>
-      </form>
       <EmailInput />
     </div>
   )
