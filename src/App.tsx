@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css'
+import EmailInput from './EmailInput';
 
 const App = () => {
   const [email, setEmail] = useState<string>('');
@@ -36,8 +37,9 @@ const App = () => {
         <input type='email' placeholder='Email' value={email} onChange={handleEmailChange} />
         <button type='submit'>Sign up</button>
       </form>
+      <EmailInput />
     </div>
   )
 }
 
-export default App
+export default App;
