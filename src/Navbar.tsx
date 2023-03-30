@@ -4,10 +4,14 @@ const Navbar = () => {
             <a href='/'>
                 <img id='logo' src='/nightlight-logo.svg' alt='nightlight logo' />
             </a>
-            <div className='links-container'>
-                <a className='link' href='/'>Home</a>
-                <a className='link' href='/support'>Support</a>
-            </div>
+            <ul className='links-container'>
+                <li>
+                    <a className='link' href='/'>Home</a>
+                </li>
+                <li>
+                    <a className='link' href='/support'>Support</a>
+                </li>
+            </ul>
         </nav>
     );
 };
