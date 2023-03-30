@@ -1,7 +1,7 @@
 const Navbar = () => {
     return (
         <nav id='navbar'>
-            <a href='/'>
+            <a id='logo-container' href='/'>
                 <img id='logo' src='/nightlight-logo.svg' alt='nightlight logo' />
             </a>
             <ul className='links-container'>

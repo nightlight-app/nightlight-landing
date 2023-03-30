@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const CORS_PROXY_URL = import.meta.env.VITE_CORS_PROXY_URL;
+const NOTION_API = import.meta.env.VITE_NOTION_API;
 const NOTION_KEY = import.meta.env.VITE_NOTION_KEY;
 const NOTION_DATABASE_ID = import.meta.env.VITE_NOTION_DATABASE_ID;
 
@@ -35,7 +37,7 @@ const EmailInput = () => {
 			 * See issue: https://github.com/makenotion/notion-sdk-js/issues/96
 			 */
 			await fetch(
-				"https://nightlight-backend.zinean00.workers.dev/cors/https://api.notion.com/v1/pages",
+				CORS_PROXY_URL + NOTION_API,
 				{
 					method: "POST",
 					mode: "cors",
