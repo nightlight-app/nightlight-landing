@@ -39,8 +39,8 @@
 
 #logo h1 {
   font-size: 6em;
-  line-height: 0.9em;
   font-weight: normal;
+  margin-block: 0.5rem;
 }
 
 #logo #blue-dot-container {
