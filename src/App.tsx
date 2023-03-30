@@ -24,7 +24,9 @@ const App = () => {
       </div>
       <div id='logo'>
         <h1>nightlight</h1>
-        <div id='blue-dot' />
+        <div id='blue-dot-container'>
+          <div id='blue-dot' />
+        </div>
       </div>
       <h2 id='subtitle'>your nightlife companion.</h2>
       <h3>Sign up for beta access.</h3>

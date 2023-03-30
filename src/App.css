@@ -5,19 +5,46 @@
   text-align: center;
 }
 
+#roads {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+
 .road {
   background-color: var(--nightlight-gray);
-  width: 0.5rem;
+  width: 25px;
+  height: 50vh;
+}
+
+#road-1, #road-5 {
+  align-self: flex-end;
+}
+
+#road-2, #road-4 {
+  width: 50vh;
+  height: 25px;
+}
+
+#road-3 {
+  height: 25vh;
 }
 
 #logo {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo h1 {
   font-size: 6em;
-  line-height: 1;
+  line-height: 0.9em;
   font-weight: normal;
+}
+
+#logo #blue-dot-container {
+  position: absolute;
 }
 
 #logo #blue-dot {
@@ -25,9 +52,9 @@
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
-  position: absolute;
-  top: 0.4rem;
-  right: 11rem;
+  position: relative;
+  bottom: 2.3rem;
+  left: 3.74rem;
 
   box-shadow: 0 0 15px 4px var(--nightlight-blue);
 }
