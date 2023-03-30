@@ -1,33 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [email, setEmail] = useState<string>('');
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('TODO: sign up: ', email);
+  };
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='App'>
+      <div id='roads'>
+        <div id='road-1' className='road' />
+        <div id='road-2' className='road' />
+        <div id='road-3' className='road' />
+        <div id='road-4' className='road' />
+        <div id='road-5' className='road' />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div id='logo'>
+        <h1>nightlight</h1>
+        <div id='blue-dot' />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h2 id='subtitle'>your nightlife companion.</h2>
+      <h3>Sign up for beta access.</h3>
+      <form id='signup-form' onSubmit={handleSubmit}>
+        <input type='email' placeholder='Email' value={email} onChange={handleEmailChange} />
+        <button type='submit'>Sign up</button>
+      </form>
     </div>
   )
 }
