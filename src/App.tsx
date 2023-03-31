@@ -9,6 +9,7 @@ const App = () => {
       <div id='content'>
         <h1 className='title'>your nightlife companion.</h1>
         <h2 className='subtitle'>sign up for beta access.</h2>
+        <h3>Ethan is testing...</h3>
         <EmailInput />
       </div>
       <div id='background-container'>
