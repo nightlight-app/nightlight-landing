@@ -1,7 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import EmailInput from './components/EmailInput';
-import BackgroundIcon from './components/BackgroundIcon';
 
 const App = () => {
   return (
@@ -12,7 +11,9 @@ const App = () => {
         <h2 className='subtitle'>sign up for beta access.</h2>
         <EmailInput />
       </div>
-      <BackgroundIcon />
+      <div id='background-container'>
+        <img src='/nightlight-icon-transparent.svg' alt='nightlight icon' id='background-icon' />
+      </div>
     </div>
   );
 };
