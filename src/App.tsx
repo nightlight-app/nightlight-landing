@@ -11,13 +11,6 @@ const App = () => {
         <h2 className='subtitle'>sign up for beta access.</h2>
         <EmailInput />
       </div>
-      <div id='background-container'>
-        <img
-          src='/nightlight-icon-transparent.svg'
-          alt='nightlight icon'
-          id='background-icon'
-        />
-      </div>
     </div>
   );
 };
