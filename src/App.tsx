@@ -1,6 +1,6 @@
 import './App.css';
-import Navbar from './Navbar';
-import EmailInput from './EmailInput';
+import Navbar from './components/Navbar';
+import EmailInput from './components/EmailInput';
 
 const App = () => {
   return (

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import "./EmailInput.css";
-
 const CORS_PROXY_URL = import.meta.env.VITE_CORS_PROXY_URL;
 const NOTION_API = import.meta.env.VITE_NOTION_API;
 const NOTION_KEY = import.meta.env.VITE_NOTION_KEY;

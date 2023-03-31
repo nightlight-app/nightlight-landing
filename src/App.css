@@ -11,72 +11,11 @@
   height: 100%;
 }
 
-nav#navbar {
-  width: 90vw;
-  max-width: 1280px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-#logo-container {
-  margin-right: auto;
-}
-
-#logo {
-  width: 150px;
-}
-
-nav#navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav#navbar li {
-  margin-inline: 1rem;
-}
-
-nav#navbar .link {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-nav#navbar .link:hover {
- color: var(--nightlight-blue);
-}
-
 #content {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-form#signup-form {
-  margin-top: 2rem;
-  margin: 0 auto;
-}
-
-input[type='email'] {
-  border: 2px solid var(--nightlight-gray);
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  font-family: inherit;
-  color: white;
-  background-color: var(--nightlight-gray);
-  flex: 1;
-  transition: border-color 0.25s;
-}
-
-input[type='email']:focus,
-input[type='email']:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-  border-color: var(--nightlight-blue);
 }
 
 button {
