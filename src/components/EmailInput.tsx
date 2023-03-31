@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 
 import './EmailInput.css';
 
-const CORS_PROXY_URL = import.meta.env.VITE_CORS_PROXY_URL;
-const NOTION_API = import.meta.env.VITE_NOTION_API;
-const NOTION_KEY = import.meta.env.VITE_NOTION_KEY;
-const NOTION_DATABASE_ID = import.meta.env.VITE_NOTION_DATABASE_ID;
-
 const EmailInput = () => {
   const [email, setEmail] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -35,42 +30,12 @@ const EmailInput = () => {
     } else setError('');
 
     try {
-      /**
-       * Makes a POST request to the Notion API via CORS proxy configured by Cloudflare Workers
-       * This is because the Notion API does not support CORS
-       * See issue: https://github.com/makenotion/notion-sdk-js/issues/96
-       */
-      await fetch(CORS_PROXY_URL + NOTION_API, {
+      await fetch('/api/submit-email', {
         method: 'POST',
-        mode: 'cors',
         headers: {
-          Authorization: `Bearer ${NOTION_KEY}`,
           'Content-Type': 'application/json',
-          'Notion-Version': '2022-06-28',
         },
-        body: JSON.stringify({
-          parent: {
-            database_id: NOTION_DATABASE_ID,
-          },
-          properties: {
-            // Save email
-            Email: {
-              title: [
-                {
-                  text: {
-                    content: email,
-                  },
-                },
-              ],
-            },
-            // Save date
-            Date: {
-              date: {
-                start: new Date().toISOString(),
-              },
-            },
-          },
-        }),
+        body: JSON.stringify({ email }),
       });
     } catch (error) {
       console.log(error);
