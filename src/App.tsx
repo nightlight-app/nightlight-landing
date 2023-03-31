@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import EmailInput from './components/EmailInput';
+import BackgroundIcon from './components/BackgroundIcon';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <h3>Sign up for beta access.</h3>
         <EmailInput />
       </div>
+      <BackgroundIcon />
     </div>
   );
 };
