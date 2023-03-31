@@ -12,7 +12,11 @@ const App = () => {
         <EmailInput />
       </div>
       <div id='background-container'>
-        <img src='/nightlight-icon-transparent.svg' alt='nightlight icon' id='background-icon' />
+        <img
+          src='/nightlight-icon-transparent.svg'
+          alt='nightlight icon'
+          id='background-icon'
+        />
       </div>
     </div>
   );

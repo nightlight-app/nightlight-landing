@@ -1,27 +1,27 @@
 form#signup-form {
-    margin-top: 2rem;
-    margin: 0 auto;
+  margin-top: 2rem;
+  margin: 0 auto;
 }
-  
+
 input[type='email'] {
-    border: 2px solid var(--nightlight-gray);
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    font-family: inherit;
-    color: white;
-    background-color: var(--nightlight-gray);
-    flex: 1;
-    transition: border-color 0.25s;
-    margin-bottom: 1rem;
+  border: 2px solid var(--nightlight-gray);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  color: white;
+  background-color: var(--nightlight-gray);
+  flex: 1;
+  transition: border-color 0.25s;
+  margin-bottom: 1rem;
 }
-  
+
 input[type='email']:focus,
 input[type='email']:focus-visible {
-    border-color: var(--nightlight-blue);
+  border-color: var(--nightlight-blue);
 }
 
 button[type='submit'] {
-    margin: 0;
-    margin-left: 1rem;
+  margin: 0;
+  margin-left: 1rem;
 }
