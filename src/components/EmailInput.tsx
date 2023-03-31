@@ -13,6 +13,8 @@ const EmailInput = () => {
   const [success, setSuccess] = useState<string>('');
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (error) setError('');
+    if (success) setSuccess('');
     setEmail(e.target.value);
   };
 
@@ -28,7 +30,7 @@ const EmailInput = () => {
     e.preventDefault();
 
     if (!validateEmail(email)) {
-      setError('Please enter a valid email address');
+      setError('invalid email address.');
       return;
     } else setError('');
 
@@ -73,24 +75,28 @@ const EmailInput = () => {
     } catch (error) {
       console.log(error);
     }
-    setSuccess('Thank you for signing up!');
+    setSuccess('thanks for signing up!');
   };
 
   return (
     <form id='signup-form' onSubmit={handleSubmit}>
-      <input
-        type='email'
-        placeholder='Email'
-        onChange={handleEmailChange}
-        defaultValue={email}
-      />
-      <button type='submit'>Submit</button>
-
-      {/* Show error message */}
-      {error && <p>{error}</p>}
-
-      {/* Only show success message if no error and success */}
-      {!error && success && <p>{success}</p>}
+      <div className='email-input-container'>
+        <input
+          className={`email-input ${
+            error ? 'error' : success ? 'success' : ''
+          }`}
+          type='email'
+          placeholder='email'
+          onChange={handleEmailChange}
+          defaultValue={email}
+        />
+        {(error || success) && (
+          <p className={`message ${error ? 'error' : 'success'}`}>
+            {error || success}
+          </p>
+        )}
+      </div>
+      <button type='submit'>submit</button>
     </form>
   );
 };

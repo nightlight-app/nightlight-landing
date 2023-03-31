@@ -9,7 +9,7 @@ const Navbar = () => {
       <ul className='links-container'>
         <li>
           <a className='link' href='/support'>
-            Support
+            support
           </a>
         </li>
       </ul>
