@@ -8,9 +8,6 @@ const Navbar = () => {
             </a>
             <ul className='links-container'>
                 <li>
-                    <a className='link' href='/'>Home</a>
-                </li>
-                <li>
                     <a className='link' href='/support'>Support</a>
                 </li>
             </ul>

@@ -8,8 +8,8 @@ const App = () => {
     <div id='App'>
       <Navbar />
       <div id='content'>
-        <h2 id='subtitle'>your nightlife companion.</h2>
-        <h3>Sign up for beta access.</h3>
+        <h1 className='title'>your nightlife companion.</h1>
+        <h2 className='subtitle'>sign up for beta access.</h2>
         <EmailInput />
       </div>
       <BackgroundIcon />
