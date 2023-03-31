@@ -1,8 +1,6 @@
 form#signup-form {
   margin-top: 2rem;
   margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
 }
 
 .email-input {
@@ -57,5 +55,5 @@ form#signup-form {
 
 button[type='submit'] {
   margin: 0;
-  margin-left: 1rem;
+  margin-top: 1rem;
 }
