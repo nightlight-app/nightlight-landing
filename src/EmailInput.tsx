@@ -47,6 +47,7 @@ const EmailInput = () => {
 						Authorization: `Bearer ${NOTION_KEY}`,
 						"Content-Type": "application/json",
 						"Notion-Version": "2022-06-28",
+						"Allow": "POST",
 					},
 					body: JSON.stringify({
 						parent: {
