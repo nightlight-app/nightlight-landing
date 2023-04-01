@@ -6,13 +6,13 @@ const Navbar = () => {
       <a id='logo-container' href='/'>
         <img id='logo' src='/nightlight-logo.svg' alt='nightlight logo' />
       </a>
-      <ul className='links-container'>
+      {/* <ul className='links-container'>
         <li>
           <a className='link' href='/support'>
             support
           </a>
         </li>
-      </ul>
+      </ul> */}
     </nav>
   );
 };
