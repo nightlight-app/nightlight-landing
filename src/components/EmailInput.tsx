@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './EmailInput.css';
 
-const API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
+const API_ENDPOINT = process.env.API_ENDPOINT || 'NO_ENV_VAR_DETECTED';
 
 const EmailInput = () => {
   const [email, setEmail] = useState<string>('');
