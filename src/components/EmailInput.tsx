@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import './EmailInput.css';
 
+const API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
+
 const EmailInput = () => {
   const [email, setEmail] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -30,7 +32,7 @@ const EmailInput = () => {
     } else setError('');
 
     try {
-      await fetch('/api/submit-email', {
+      await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
