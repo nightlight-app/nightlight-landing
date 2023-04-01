@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 import './EmailInput.css';
 
-const API_ENDPOINT = process.env.API_ENDPOINT || 'NO_ENV_VAR_DETECTED';
+const API_ENDPOINT =
+  'https://nightlight-api.azurewebsites.net/api/submit-email?code=I_wXqR_bmGk1kf1iUlAAbNYwWAGeDe3knfYBNiXuzC6kAzFuXn6Gbw==';
 
 const EmailInput = () => {
   const [email, setEmail] = useState<string>('');
