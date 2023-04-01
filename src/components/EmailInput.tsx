@@ -36,6 +36,7 @@ const EmailInput = () => {
       await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: {
+          Accept: '*/*',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email }),
