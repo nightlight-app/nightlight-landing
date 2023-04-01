@@ -54,7 +54,7 @@ const EmailInput = () => {
           className={`email-input ${
             error ? 'error' : success ? 'success' : ''
           }`}
-          type='email'
+          type='text'
           placeholder='email'
           onChange={handleEmailChange}
           defaultValue={email}
